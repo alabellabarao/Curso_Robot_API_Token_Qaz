@@ -1,4 +1,4 @@
-​name: Test Robot Framework API
+​name: Testes com Robot Framework API
 
 on: [push, pull_request]
 
