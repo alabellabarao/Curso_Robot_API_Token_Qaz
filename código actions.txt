@@ -1,20 +1,22 @@
-​name: Test Robot Framework API
-
+## Regra da Pipeline, toda vez que tiver um push ou pull_request
 on: [push, pull_request]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
 
+  test:
+# Rodar no linux na última versão
+    runs-on: ubuntu-latest
     steps:
+# Baixa o projeto (checkout)
     - name: Checkout
       uses: actions/checkout@v2
-
+# Action para gerar relatório
     - name: Robot Framework
       uses: joonvena/robotframework-docker-action@v1.0
       with:
-        robot_reports_dir: 'reports'
 
+        robot_reports_dir: 'reports'
+# Action para salvar o report
     - name: Upload test results
       uses: actions/upload-artifact@v2
       if: always()
