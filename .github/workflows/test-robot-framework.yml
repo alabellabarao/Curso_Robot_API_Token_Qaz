@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Check out repository
-      uses: actions/checkout@v3  # Atualizado para v3
+      uses: actions/checkout@v4  # Atualizado para v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4  # Certifique-se de usar a versão mais recente
       with:
         python-version: '3.8'
 
